@@ -1,7 +1,3 @@
-ALTER TABLE PurchaseDB.dbo.LOCATION
-ADD 
-LocationName NVARCHAR(20);
-
 CREATE TABLE PurchaseDB.dbo.PurchaseLog(
 
     ChangeID INT Primary Key IDENTITY(1,1),
