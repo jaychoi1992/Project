@@ -86,22 +86,3 @@ CREATE TABLE PurchaseDB.dbo.CardInfo(
 
 
 )
-
-ALTER TABLE PurchaseDB.dbo.LOCATION
-ADD 
-LocationName NVARCHAR(20);
-
-CREATE TABLE PurchaseDB.dbo.PurchaseLog(
-
-    ChangeID INT Primary Key IDENTITY(1,1),
-    PurchasdID INT,
-    Total_Price MONEY ,
-    Total_Saving MONEY,
-    Total_item# SMALLINT,
-    PurchasDate DateTime,
-    PurchasTime Time,
-    LocationID INT,
-    UpdatedAt DateTime, 
-    Operation CHAR(3),
-    CHECK(Operation = 'INS' OR Operation = 'DEL')
-)
